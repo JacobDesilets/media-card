@@ -1,9 +1,11 @@
 :root {
     --base: #2D2D2D;
     --accent: #3762bf;
+    --accent-transparent: rgba(55,98,191,0.9);
     --accent-lt: #f2f2f2;
     --accent-dk: #818181;
     --rounded-corner: 30px;
+    
 }
 
 body {
@@ -24,12 +26,38 @@ body {
     border-radius: var(--rounded-corner);
 }
 
-.header > div {
+.material-icons {
+    font-size: 24px;
+    padding-right: 1.5rem;
+    color: var(--accent-lt);
+}
+
+
+.play {
     border-radius: var(--rounded-corner);
-    background: var(--accent-dk);
+    background: var(--accent-transparent);
+    padding:1rem;
     position: absolute;
-    left: 5%;
+    left: 2.5%;
     bottom: 5%;
+    display: flex;
+    align-items: center;
+    transition: 0.15s;
+}
+
+.play:hover {
+    background: var(--accent);
+}
+
+.play > span:nth-child(2) {
+    color: var(--accent-lt);
+    font-weight: 300;
+    padding-right: 0.5rem;
+}
+
+.play > span:nth-child(3) {
+    color: var(--accent-lt);
+    font-weight: 700;
 }
 
 .thumbnail {
